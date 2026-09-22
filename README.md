@@ -4,18 +4,23 @@ An end-to-end data analytics project featuring a Python ETL pipeline for data pr
 
 ![Dashboard Preview](dashboard_preview.png)
 
-**[Live Interactive Dashboard on Tableau Public] https://public.tableau.com/app/profile/ann.ign/viz/Parameters_17899346849220/Sales?publish=yes**
+**[Live Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/ann.ign/viz/Parameters_17899346849220/Sales?publish=yes)**
 
 ---
 
 ## Technical Overview & Workflow
 
 ### 1. Python Data Pipeline (pandas)
-Raw sales logs were processed and standardized to ensure data integrity before visualization:
-* **Currency Standardization:** Extracted and cleaned multi-currency symbols ($, GBP) using regex, converting values into standard numeric formats.
-* **Date Parsing:** Normalized inconsistent raw date string formats into a unified YYYY-MM-DD datetime structure.
-* **Missing Value Imputation:** Handled missing categorical records by assigning explicit Unknown attributes for unassigned departments and managers.
-* **Feature Engineering:** Calculated gross transaction revenues and flagged loyalty card adoption (CARD vs. GUEST).
+**Python script:** [data_cleaning.py](data_cleaning.py)
+
+Automated ETL script  processing raw multi-currency sales logs into a cleaned, analytics-ready dataset:
+* **Initial Audit:** Assessed missing data ratios (df.isnull().mean()) and schema structure.
+* **Date Parsing & Formatting:** Parsed mixed raw date strings into standard YYYY-MM-DD objects (pd.to_datetime) and reordered columns.
+* **String Cleaning & Currency Standardizing:** Stripped currency text prefixes (Price:, $, GBP), handled whitespaces, and converted raw text prices into clean floats (pd.to_numeric).
+* **Missing Value Imputation:** Assigned explicit Unknown attributes to unassigned categorical fields (Department, Manager) to track attribution gaps.
+* **Feature Engineering:** Calculated gross revenue (Price * Quantity) and extracted customer loyalty tags (CARD vs. GUEST) from Customer_ID.
+* **Automated Excel Reporting:** Generated multi-sheet Excel reports with automated revenue share calculations (Share (%)) grouped by Manager, Department, City, and Customer Type.
+
 
 ### 2. Dashboard Capabilities & Diagnostic Value
 The Tableau dashboard serves as a dynamic diagnostic tool, allowing users to analyze performance across **Department**, **City Store**, and **Manager** levels via integrated parameters:
