@@ -13,7 +13,8 @@ Live Dashboard Link: **[Live Interactive Dashboard on Tableau Public](https://pu
 
 ## Dashboard Preview
 
-![Dashboard Preview](dashboard_preview.png)
+![Dashboard Preview](dashboard_preview1.png)
+![Dashboard Preview](dashboard_preview2.png)
 
 
 ---
