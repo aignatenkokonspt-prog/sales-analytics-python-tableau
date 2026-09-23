@@ -1,4 +1,4 @@
-# Sales-analytics-python-tableau
+# Sales Overview / ABC Analysis
 
 An end-to-end data analytics project featuring a Python ETL pipeline for data preprocessing and an interactive Tableau dashboard for multi-angle sales performance analysis.
 
