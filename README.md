@@ -2,15 +2,19 @@
 
 An end-to-end data analytics project featuring a Python ETL pipeline for data preprocessing and an interactive Tableau dashboard for multi-angle sales performance analysis.
 
+Live Dashboard Link: **[Live Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/ann.ign/viz/Parameters_17899346849220/Sales?publish=yes)**
+
+
 ## Tech Stack
 
 * **Python:** `pandas`
 * **BI Platform:** `Tableau Desktop` / `Tableau Public`
 * **Methods:** `ABC Analys` / `Pareto Analys`, `Dynamic Parameter Controls`
 
+## Dashboard Preview
+
 ![Dashboard Preview](dashboard_preview.png)
 
-**[Live Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/ann.ign/viz/Parameters_17899346849220/Sales?publish=yes)**
 
 ---
 
